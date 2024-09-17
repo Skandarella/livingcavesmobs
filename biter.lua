@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs:register_mob("livingcavesmobs:biter", {
 stepheight = 3,
@@ -73,17 +73,17 @@ stepheight = 3,
 	end,
 })
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:biter",
-	nodes = {"livingcaves:dripstonecave_bottom"},
-	min_light = 0,
-	interval = 60,
-	chance = 80,
-	active_object_count = 3,
-	min_height = -200,
-	max_height = -90,
-})
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:biter",
+		nodes = {"livingcaves:dripstonecave_bottom"},
+		min_light = 0,
+		interval = 60,
+		chance = 80,
+		active_object_count = 3,
+		min_height = -200,
+		max_height = -90,
+	})
 end
 
 mobs:register_egg("livingcavesmobs:biter", S("Biter"), "abiter.png")

@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs.grub_drops = {
 	"farming:string"
@@ -138,7 +138,7 @@ minetest.register_craftitem(":livingcavesmobs:cocoon", {
 	},
 	on_use = minetest.item_eat(2),
 	sounds = default.node_sound_leaves_defaults(),
-	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3},
+	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable = 2},
         drop = "livingcavesmobs:cocoon",
 	after_place_node = function(pos, placer)
 		if placer:is_player() then
@@ -162,7 +162,7 @@ minetest.register_craftitem(":livingcavesmobs:mothegg", {
 		fixed = {-0.31, -0.5, -0.31, 0.31, 0.5, 0.31}
 	},
 	on_use = minetest.item_eat(2),
-	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3},
+	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable = 2},
         drop = "livingcavesmobs:mothegg",
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer)
@@ -176,69 +176,69 @@ minetest.register_craftitem(":livingcavesmobs:mothegg", {
 minetest.register_craft({
 	output = "livingcavesmobs:cocoon",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:grub", "default:bush_leaves", "default:bush_leaves", "default:bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:cocoon",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:grub", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:cocoon",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:grub", "naturalbiomes:beach_bush_leaves", "naturalbiomes:beach_bush_leaves", "naturalbiomes:beach_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:cocoon",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:grub", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "wool:white",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:cocoon", "livingcavesmobs:cocoon", "livingcavesmobs:cocoon", "livingcavesmobs:cocoon"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:moth",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:cocoon", "default:stick"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:grub",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:mothegg", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:grub",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:mothegg", "naturalbiomes:beach_bush_leaves", "naturalbiomes:beach_bush_leaves", "naturalbiomes:beach_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:grub",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:mothegg", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves"}
 })
 
 minetest.register_craft({
 	output = "livingcavesmobs:grub",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"livingcavesmobs:mothegg", "default:bush_leaves", "default:bush_leaves", "default:bush_leaves"}
 })

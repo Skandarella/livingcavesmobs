@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs.moth_drops = {
 	"livingcavesmobs:mothegg"
@@ -120,17 +120,17 @@ view_range = 5,
 })
 
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:moth",
-	nodes = {"livingcaves:mushcave_bottom"},
-	min_light = 0,
-        interval = 60,
-	chance = 800, -- 15000
-	active_object_count = 4,
-	min_height = -90,
-	max_height = -30,
-})
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:moth",
+		nodes = {"livingcaves:mushcave_bottom"},
+		min_light = 0,
+			interval = 60,
+		chance = 800, -- 15000
+		active_object_count = 4,
+		min_height = -90,
+		max_height = -30,
+	})
 end
 
 mobs:register_egg("livingcavesmobs:moth", S("Moth"), "amoth.png")

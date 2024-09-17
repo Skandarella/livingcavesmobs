@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 local random = math.random
 
 mobs:register_mob("livingcavesmobs:explodingbacteria", {
@@ -74,17 +74,17 @@ sounds = {
 })
 
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:explodingbacteria",
-	nodes = {"livingcaves:bacteriacave_nest"},
-	neighbors = {"livingcaves:bacteriacave_nestfoot"},
-	min_light = 0,
-	interval = 10,
-	chance = 1, 
-	active_object_count = 4,
-	min_height = -400,
-	max_height = -200,
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:explodingbacteria",
+		nodes = {"livingcaves:bacteriacave_nest"},
+		neighbors = {"livingcaves:bacteriacave_nestfoot"},
+		min_light = 0,
+		interval = 10,
+		chance = 1,
+		active_object_count = 4,
+		min_height = -400,
+		max_height = -200,
 
 		on_spawn = function(self, pos)
 
