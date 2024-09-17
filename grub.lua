@@ -138,7 +138,7 @@ minetest.register_craftitem(":livingcavesmobs:cocoon", {
 	},
 	on_use = minetest.item_eat(2),
 	sounds = default.node_sound_leaves_defaults(),
-	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable=2},
+	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable = 2},
         drop = "livingcavesmobs:cocoon",
 	after_place_node = function(pos, placer)
 		if placer:is_player() then
@@ -162,7 +162,7 @@ minetest.register_craftitem(":livingcavesmobs:mothegg", {
 		fixed = {-0.31, -0.5, -0.31, 0.31, 0.5, 0.31}
 	},
 	on_use = minetest.item_eat(2),
-	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable=2},
+	groups = {food = 1, flammable = 2, fleshy = 3, dig_immediate = 3, eatable = 2},
         drop = "livingcavesmobs:mothegg",
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer)
