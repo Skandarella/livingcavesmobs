@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs:register_mob("livingcavesmobs:yeti", {
 	stepheight = 3,
@@ -87,17 +87,17 @@ mobs:register_mob("livingcavesmobs:yeti", {
 })
 
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:yeti",
-	nodes = {"livingcaves:icecave_ice"},
-	min_light = 0,
-	interval = 60,
-	chance = 2, -- 15000
-	active_object_count = 1,
-	min_height = -30,
-	max_height = -5,
-})
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:yeti",
+		nodes = {"livingcaves:icecave_ice"},
+		min_light = 0,
+		interval = 60,
+		chance = 2, -- 15000
+		active_object_count = 1,
+		min_height = -30,
+		max_height = -5,
+	})
 end
 
 mobs:register_egg("livingcavesmobs:yeti", S("Yeti"), "ayeti.png")

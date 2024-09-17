@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs:register_mob("livingcavesmobs:flesheatingbacteria", {
 stepheight = 0,
@@ -57,17 +57,17 @@ stepheight = 0,
 })
 
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:flesheatingbacteria",
-	nodes = {"livingcaves:bacteriacave_trapnode"},
-	min_light = 0,
-	interval = 10,
-	chance = 1, 
-	active_object_count = 4,
-	min_height = -400,
-	max_height = -200,
-})
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:flesheatingbacteria",
+		nodes = {"livingcaves:bacteriacave_trapnode"},
+		min_light = 0,
+		interval = 10,
+		chance = 1,
+		active_object_count = 4,
+		min_height = -400,
+		max_height = -200,
+	})
 end
 
 mobs:register_egg("livingcavesmobs:flesheatingbacteria", S("Flesh Eating Bacteria"), "aflesheatingbacteria.png")

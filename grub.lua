@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs.grub_drops = {
 	"farming:string"

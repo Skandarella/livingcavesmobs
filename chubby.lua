@@ -1,4 +1,4 @@
-local S = minetest.get_translator("livingcavesmobs")
+local S = livingcavesmobs.S
 
 mobs:register_mob("livingcavesmobs:chubby", {
 	stepheight = 3,
@@ -69,18 +69,18 @@ mobs:register_mob("livingcavesmobs:chubby", {
 	end,
 })
 
-if not mobs.custom_spawn_livingcavesmobs then
-mobs:spawn({
-	name = "livingcavesmobs:chubby",
-	nodes = {"livingcaves:water_source", "livingcaves:water_flowing"},
-	neighbors = {"livingcaves:bacteriacave_poolstone"},
-	min_light = 0,
-	interval = 60,
-	chance = 80,
-	active_object_count = 1,
-	min_height = -400,
-	max_height = -200,
-})
+if not livingcavesmobs.custom_spawn then
+	mobs:spawn({
+		name = "livingcavesmobs:chubby",
+		nodes = {"livingcaves:water_source", "livingcaves:water_flowing"},
+		neighbors = {"livingcaves:bacteriacave_poolstone"},
+		min_light = 0,
+		interval = 60,
+		chance = 80,
+		active_object_count = 1,
+		min_height = -400,
+		max_height = -200,
+	})
 end
 
 mobs:register_egg("livingcavesmobs:chubby", S("Chubby"), "achubby.png")
