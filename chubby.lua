@@ -83,9 +83,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("livingcavesmobs:chubby", ("Chubby"), "achubby.png")
+mobs:register_egg("livingcavesmobs:chubby", S("Chubby"), "achubby.png")
 
 
 mobs:alias_mob("livingcavesmobs:chubby", "livingcavesmobs:chubby") -- compatibility
-
-
